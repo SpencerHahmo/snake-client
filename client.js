@@ -11,13 +11,17 @@ const connect = function () {
   conn.setEncoding("utf8");
 
   conn.on('connect', () => {
-    let delay = 0;
     console.log("Connection Established");
     conn.write("Name: SCH");
     
     /*setInterval(() => {
       conn.write("Move: up");
     }, 50)
+    
+    let delay = 50;
+    setTimeout(() => {
+      conn.write("Move: up");
+    }, delay += 50)
     Note
     "Move: up" - move up one square (unless facing down)
     "Move: down" - move down one square (unless facing up)

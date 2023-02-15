@@ -12,6 +12,7 @@ const connect = function () {
 
   conn.on('connect', () => {
     console.log("Connection Established");
+    conn.write("Name: SCH");
   })
 
   conn.on('data', (data) => {

@@ -1,3 +1,5 @@
+const { connect } = require("./client");
+
 // Stores the active TCP connection object.
 let connection;
 
@@ -29,6 +31,19 @@ const handleUserInput = function (key) {
   if (key === 'd') {
     //console.log("Move: right")
     connection.write('Move: right');
+  }
+
+
+  if (key === '1') {
+    connection.write("Say: Hello o/");
+  }
+  
+  if (key === '2') {
+    connection.write("Say: LEEROY JENKINS");
+  }
+
+  if (key === '3') {
+    connection.write("Say: MAXIMUM OVERDRIVE!");
   }
 }
 
